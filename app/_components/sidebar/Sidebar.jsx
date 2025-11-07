@@ -2,43 +2,86 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { LuLayoutDashboard, LuUser } from "react-icons/lu"; // ikon dari Lucide
+import { useEffect, useState } from "react";
+import Image from "next/image";
+import "./Sidebar.css";
 
 export default function Sidebar() {
   const pathname = usePathname();
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const menus = [
     {
       name: "Dashboard",
-      path: "/dashboard",
-      icon: <LuLayoutDashboard size={18} />,
+      path: "/",
+      icon: "bi-grid",
     },
-    { name: "Profile", path: "/profile", icon: <LuUser size={18} /> },
+    {
+      name: "Daftar Aset",
+      path: "/daftar-aset",
+      icon: "bi-box-seam",
+    },
+    {
+      name: "Pemeliharaan",
+      path: "/pemeliharaan",
+      icon: "bi-tools",
+    },
+    {
+      name: "Penyusutan",
+      path: "/penyusutan",
+      icon: "bi-graph-down",
+    },
+    {
+      name: "Peminjaman",
+      path: "/peminjaman",
+      icon: "bi-card-checklist",
+    },
+    {
+      name: "Pengaturan",
+      path: "/pengaturan",
+      icon: "bi-gear",
+    },
   ];
 
   return (
-    <aside
-      className="d-flex flex-column bg-danger text-white vh-100 position-fixed"
-      style={{ width: "240px" }}
-    >
-      <div className="p-3 border-bottom border-light">
-        <h5 className="fw-bold mb-0">Admin Panel</h5>
+    <aside className={`sidebar ${isMobile ? "sidebar--mobile" : ""}`}>
+      <div className="sidebar__header">
+        {!isMobile ? (
+          <div className="sidebar__logo">
+            <Image src="/assets/logo.png" alt="Logo" width={28} height={28} />
+            <h5 className="sidebar__title">Aset Management</h5>
+          </div>
+        ) : (
+          <Image src="/assets/logo.png" alt="Logo" width={28} height={28} />
+        )}
       </div>
-      <nav className="flex-grow-1 mt-3">
-        {menus.map((item) => (
-          <Link
-            key={item.path}
-            href={item.path}
-            className={`d-flex align-items-center gap-2 px-3 py-2 text-decoration-none ${
-              pathname === item.path
-                ? "bg-white text-danger fw-semibold"
-                : "text-white"
-            }`}
-          >
-            <span className="me-2">{item.icon}</span>
-            {item.name}
-          </Link>
-        ))}
+
+      <nav className="sidebar__menu">
+        {menus.map((item) => {
+          const isActive = pathname === item.path;
+          return (
+            <Link
+              key={item.path}
+              href={item.path}
+              className={`sidebar__link ${isActive ? "active" : ""}`}
+              style={{
+                justifyContent: isMobile ? "center" : "flex-start",
+              }}
+            >
+              <i className={`bi ${item.icon}`}></i>
+              {!isMobile && <span>{item.name}</span>}
+            </Link>
+          );
+        })}
       </nav>
     </aside>
   );
