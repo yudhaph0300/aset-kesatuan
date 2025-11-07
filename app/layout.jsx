@@ -1,12 +1,12 @@
 import "./globals.css";
-import Sidebar from "./_components/sidebar/Sidebar";
-import Header from "./_components/header/Header";
+import Sidebar from "./_components/Sidebar/Sidebar";
+import Header from "./_components/Header/Header";
 import BootstrapClient from "./_components/BootstrapClient/BootstrapClient";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 export const metadata = {
   title: "Admin Panel",
-  description: "Dashboard Admin",
+  description: "Admin Sekolah Kesatuan",
 };
 
 export default function RootLayout({ children }) {
