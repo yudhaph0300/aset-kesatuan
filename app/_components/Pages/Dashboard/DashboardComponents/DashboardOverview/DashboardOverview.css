@@ -1,0 +1,19 @@
+.dashboard-overview__card {
+   background-color: #fff;
+   border-radius: 12px;
+   padding: 16px;
+}
+
+.dashboard-overview__card-title {
+   font-size: 16px;
+}
+
+.dashboard-overview__card-icon {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 32px;
+   height: 32px;
+   border-radius: 8px;
+   font-size: 18px;
+}
