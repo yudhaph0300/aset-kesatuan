@@ -3,3 +3,8 @@
    border-radius: 12px;
    padding: 16px;
 }
+
+.dashboard-chart__card-title {
+   font-size: 15px;
+   font-weight: 600;
+}
