@@ -6,7 +6,8 @@
    justify-content: space-between;
    padding: 0 20px;
    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-   position: sticky;
+   position: fixed;
+   width: calc(100vw - 250px);
    top: 0;
    z-index: 1;
 }
@@ -63,4 +64,10 @@
 .header__admin-btn:focus {
    background-color: #f9f9f9;
    color: #0f172a;
+}
+
+@media (max-width: 992px) {
+   .header {
+      width: calc(100vw - 70px);
+   }
 }
