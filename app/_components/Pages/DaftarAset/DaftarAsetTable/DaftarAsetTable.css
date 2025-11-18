@@ -1,0 +1,19 @@
+.daftar-aset-table__header {
+   background-color: #fff;
+   border-radius: 12px 12px 0 0;
+   border-bottom: 1px solid #eee;
+}
+
+.daftar-aset-table__header-title {
+   margin: 0;
+   font-size: 20px;
+   font-weight: 600;
+}
+
+.daftar-aset-table__buttons {
+   background-color: #fff;
+}
+
+.daftar-aset-table__content {
+   background-color: #fff;
+}

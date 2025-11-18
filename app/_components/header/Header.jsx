@@ -8,7 +8,7 @@ export default function Header() {
 
   const pageTitle = () => {
     if (pathname === "/") return "Dashboard";
-    if (pathname === "/profile") return "Profile";
+    if (pathname === "/daftar-aset") return "Daftar Aset";
     return "Admin Panel";
   };
 
