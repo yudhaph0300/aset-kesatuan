@@ -24,7 +24,12 @@ export default function Pagination() {
       {/* RIGHT : Go to Page */}
       <div className="pagination__goto">
         <span className="pagination__goto-label">Go to page:</span>
-        <input type="number" min="1" className="pagination__goto-input" />
+        <input
+          type="number"
+          defaultValue={1}
+          min="1"
+          className="pagination__goto-input"
+        />
         <button className="pagination__goto-button">Go</button>
       </div>
     </div>
