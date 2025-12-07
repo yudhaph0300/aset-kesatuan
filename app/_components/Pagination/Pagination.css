@@ -1,0 +1,71 @@
+/* BLOCK */
+.pagination {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 16px;
+   width: 100%;
+}
+
+/* ELEMENTS */
+.pagination__controls {
+   display: flex;
+   align-items: center;
+   gap: 6px;
+}
+
+.pagination__button {
+   padding: 6px 12px;
+   border: 1px solid #ddd;
+   background: #fff;
+   border-radius: 4px;
+   cursor: pointer;
+   font-size: 14px;
+}
+
+.pagination__button:hover {
+   background: #f5f5f5;
+}
+
+/* MODIFIER */
+.pagination__button--active {
+   background: #007bff;
+   color: #fff;
+   border-color: #007bff;
+}
+
+.pagination__dots {
+   padding: 0 6px;
+   color: #777;
+}
+
+.pagination__goto {
+   display: flex;
+   align-items: center;
+   gap: 8px;
+}
+
+.pagination__goto-label {
+   font-size: 14px;
+   color: #333;
+}
+
+.pagination__goto-input {
+   width: 65px;
+   padding: 6px 8px;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+}
+
+.pagination__goto-button {
+   padding: 6px 12px;
+   background: #007bff;
+   border: none;
+   border-radius: 4px;
+   color: white;
+   cursor: pointer;
+}
+
+.pagination__goto-button:hover {
+   background: #0069d9;
+}

@@ -1,5 +1,6 @@
 "use client";
 
+import Pagination from "@/app/_components/Pagination/Pagination";
 import "./DaftarAsetTable.css";
 
 export default function DaftarAsetTable() {
@@ -53,7 +54,6 @@ export default function DaftarAsetTable() {
           </div>
         </div>
 
-        {/* TABLE */}
         <div className="daftar-aset-table__content p-3">
           <table className="daftar-aset-table__content__table-custom">
             <thead>
@@ -96,6 +96,10 @@ export default function DaftarAsetTable() {
               ))}
             </tbody>
           </table>
+        </div>
+
+        <div className="daftar-aset-table__footer p-3">
+          <Pagination />
         </div>
       </div>
     </>
