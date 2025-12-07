@@ -1,6 +1,6 @@
 import "./globals.css";
-import Sidebar from "./_components/Sidebar/Sidebar";
-import Header from "./_components/Header/Header";
+import Sidebar from "./_components/sidebar/Sidebar.jsx";
+import Header from "./_components/header/Header.jsx";
 import BootstrapClient from "./_components/BootstrapClient/BootstrapClient";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
