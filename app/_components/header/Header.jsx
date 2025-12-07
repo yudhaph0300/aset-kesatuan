@@ -9,6 +9,10 @@ export default function Header() {
   const pageTitle = () => {
     if (pathname === "/") return "Dashboard";
     if (pathname === "/daftar-aset") return "Daftar Aset";
+    if (pathname === "/pemeliharaan") return "Pemeliharaan";
+    if (pathname === "/penyusutan") return "Penyusutan";
+    if (pathname === "/peminjaman") return "Peminjaman";
+    if (pathname === "/pengaturan") return "Pengaturan";
     return "Admin Panel";
   };
 

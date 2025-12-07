@@ -9,7 +9,7 @@ export default function PemeliharaanTable() {
         <div className="pemeliharaan-table__header p-3">
           <h5 className="pemeliharaan-table__header-title">Pemeliharaan</h5>
           <button className="btn-primary-custom">
-            <i className="bi bi-plus-circle me-2"></i>Tambah Aset
+            <i className="bi bi-plus-circle me-2"></i>Tambah Jadwal
           </button>
         </div>
 
